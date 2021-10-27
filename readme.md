@@ -13,23 +13,26 @@ Song
  - artist: {type: String, required: true}
  - description: String
 
-## Route Table
-
-User
+ User
  - username: {type: String, required: true, unique: true},
  - password: {type: String, required: true}
+ 
+ 
+
+## Route Table
+
+(update this)
 
 List your routes in a table
 
 | Route Name | URL | HTTP | Description |
-|-----|--------|--------|
-| INDEX | get | get all songs iny your playlist|
-| NEW | get | Submit a form to add song to playlist|
-| SHOW | get | Show specific song|
-| CREATE | POST | Add new song to playlist|
-| EDIT | get | Edit a song entry|
-| UPDATE | PUT |Updates a song to the playlist and redirects back to playlist|
-| DELETE | DELETE | delete a song from the playlist|
+|-----------|------|-------|-------------|
+| INDEX |/playlist| get | get all songs iny your playlist
+| NEW |/playlist/new| get | Submit a form to add song to playlist
+| SHOW |/playlist/:id| get | Show specific song
+| CREATE |/playlist| POST | Add new song to playlist
+| UPDATE |/playlist/:id| PUT |Updates a song to the playlist and redirects back to playlist
+| DELETE |/playlist| DELETE | delete a song from the playlist
 
 
 ## User Stories
