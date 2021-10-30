@@ -1,0 +1,45 @@
+{% layout "layout.liquid" %} {% block content %}
+<div>
+  <form action="/playlist/{{song._id}}?_method=PUT" method="post">
+    <fieldset>
+      <legend>Edit {{song.name}}</legend>
+      <label>
+        NAME:<input
+          type="text"
+          name="name"
+          placeholder="enter song name"
+        />
+      </label>
+      <label>
+        URL:<input
+          type="text"
+          name="URL"
+          placeholder="enter URL"
+        />
+      </label>
+      <label>
+        ARTIST:<input
+          type="text"
+          name="artist"
+          placeholder="enter artist name"
+        />
+      </label>
+      <label>
+        DESC:<input
+          type="text"
+          name="desc"
+          placeholder="enter description of song"
+        />
+      </label>
+      <label>
+        IMAGE:<input
+          type="text"
+          name="img"
+          placeholder="enter image URL for song"
+        />
+      </label>
+    </fieldset>
+    <input type="submit" value="Update {{song.name}}" />
+  </form>
+</div>
+{% endblock %}

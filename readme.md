@@ -43,6 +43,10 @@ I want to be able to save the playlist to a database under a username and passwo
 
 I also want to be able to delete, edit and add new songs to my playlist
 
+I want to be able to customize my playlist title
+
+I want to be able to stream music from any platform in one place
+
 ## Challenges
 
 - detail roadblocks and anything you did to overcome whether you did or didn't

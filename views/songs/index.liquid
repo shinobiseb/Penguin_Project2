@@ -1,0 +1,21 @@
+{% layout "layout.liquid" %} {% block content %}
+
+<h1>My Song Playlist</h1>
+
+  <a href="/playlist/new"><button class="waves-effect waves-light btn">Add a new song</button></a>
+
+<div>
+  <article>
+    {% for song in songs %}
+    <a href="/playlist/{{ song._id }}">
+      <h2>
+        {{song.name}}
+      </h2>
+    </a>
+  </article>
+  {% endfor %}
+</div>
+
+
+
+{% endblock %}
