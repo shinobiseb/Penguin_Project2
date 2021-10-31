@@ -4,14 +4,21 @@
           <h2>
             {{ song.name }}
           </h2>
-          <h3>  {{ song.name }} </h3>
-          <h3>Desc. {{ song.desc }}</h3>
-          <img src={{song.img}}>
-          <a href="/playlist/{{ song._id }}/edit"><button class="waves-effect waves-light btn">Edit</button></a>
+          <h3> {{ song.desc }}</h3>
+          <img class="showImg" src={{song.img}}> 
+          <br>
+          <!-- <audio src="{{song.URL}}"></audio> -->
+          <video width="640" height="360">
+  <source type="video/youtube" src="https://www.youtube.com/embed/{{song.URL}}" />
+</video>
+          <div class="showActions">
+          <a href="/playlist/{{ song._id }}/edit">
+            <button class="waves-effect waves-light btn">Edit</button></a>
           <form action="/playlist/{{ song._id }}?_method=DELETE" method="POST">
             <button class="waves-effect waves-light btn" type="submit" value="Delete"> Delete </button>
           </form>
           <a href="/playlist/"> <button class="waves-effect waves-light btn">Back to Main</button></a>
+          </div>
         </article>
       </div>
 {% endblock %}

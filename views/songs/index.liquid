@@ -1,14 +1,15 @@
 {% layout "layout.liquid" %} {% block content %}
 
-<h1>My Song Playlist</h1>
+<div class="indexHeader">
+  <h2>My Song Playlist</h2>
+  <a href="/playlist/new" id="newSongBut" class="waves-effect waves-light btn">Create a New Song</a>
+</div>
 
-  <a href="/playlist/new"><button class="waves-effect waves-light btn">Add a new song</button></a>
-
-<div>
+<div class="indexSongs collection">
   <article>
     {% for song in songs %}
-    <a href="/playlist/{{ song._id }}">
-      <h2>
+    <a class="collection-item"href="/playlist/{{ song._id }}">
+      <h2 class="textList">
         {{song.name}}
       </h2>
     </a>

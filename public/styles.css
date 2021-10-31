@@ -1,0 +1,102 @@
+body {
+    margin: 2em 10em;
+    background-color: #5C374C;
+}
+
+
+
+main {
+    background-color: #985277;
+    padding: 12px;
+}
+
+.headerText {
+    font-family: 'Bangers', cursive;
+    margin: 5px;
+    text-shadow: 2px 2px 2px white;
+}
+
+a {
+    color: orange;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.indexHeader {
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    background-color: #E77B73;
+    padding: 0em 1.5em;
+}
+
+.page-footer {
+    background-color: orange;
+}
+
+#newSongBut{
+    background-color: #FF8C61;
+    color: black;
+    margin: auto 0;
+}
+
+#footer {
+    padding: 10px;
+    background-color: #CE6A85;
+}
+
+#header {
+    background-color: #CE6A85;
+}
+
+#foot {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+button {
+    margin: 2px auto;
+}
+
+.showActions {
+    display: inline-flex;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.waves-effect {
+    background-color: #CE6A85;
+    color: black;
+}
+.collection-item {
+    background-color: #FAA275 !important;
+    border: none !important;
+}
+
+.collection-item:hover {
+    background-color: #ffbd9d !important;
+    color: white !important;
+}
+
+.collection {
+    border: none !important;
+}
+
+.textList {
+    color: black;
+}
+
+
+
+.showActions {
+    margin: 15px auto;
+}

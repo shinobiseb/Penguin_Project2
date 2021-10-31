@@ -11,6 +11,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
     />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
         <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -31,12 +38,19 @@
     <script src="/app.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1></h1>
-    </header>
+ <div id="header" class="card-panel lighten-2">
+      <h1 class="headerText">Keep Playin</h1>
+    </div>
 
     <main>{% block content %}My default content{% endblock %}</main>
 
-    <footer></footer>
+    <footer>
+      <div id="footer" class="card-panel  lighten-2">
+        <div id="foot">
+        <h6 class="white-text">Keep Playin</h6>
+        <h6 class="white-text">Sketch the Conductor</h6>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

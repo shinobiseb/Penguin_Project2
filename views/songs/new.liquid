@@ -1,8 +1,8 @@
 {% layout "layout.liquid" %} {% block content %}
 <div>
-  <form action="/playlist/{{song._id}}?_method=PUT" method="post">
+  <form action="/playlist" method="post"> 
     <fieldset>
-      <legend>Edit {{song.name}}</legend>
+      <legend>New Song</legend>
       <label>
         NAME:<input
           type="text"
@@ -39,7 +39,9 @@
         />
       </label>
     </fieldset>
-    <input type="submit" value="Update {{song.name}}" />
+    <input type="submit" value="Create New Song" />
   </form>
 </div>
 {% endblock %}
+
+<!-- {{song._id}}?_method=PUT -->
