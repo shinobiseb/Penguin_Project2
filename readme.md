@@ -21,8 +21,6 @@ Song
 
 ## Route Table
 
-(update this)
-
 List your routes in a table
 
 | Route Name | URL | HTTP | Description |
@@ -60,16 +58,9 @@ Something that was also challenging was working with the JS and CSS of a new lib
 ### Video/Audio Playing
 By far the hardest challenge of this build was getting the original concept of dynamically added youtube, spotify, and soundcloud links to all play in a consistent playlist.  
 
-First, I started by searching how to dynamically embed videos.  I found a very helpful stack overflow link: 
-https://stackoverflow.com/questions/29452134/embedding-youtube-video-dynamically
+First, I started by searching how to dynamically embed videos, which showed a lot of results that were for different types of data retrieval.  None of which were of use to me.
 
-This link essentially stated three rules, two of which were of use to me.  
-
-The link should be added in jquery, but I thought liquid would work just as well.  The second rule was I would need a youtube api link, and to work with youtube's API for the rest of the journey
-
-#### Youtube API
-
-
+Asking a developer friend, I found that using the split method when pasting a link into the edit or new song field, would allow me to use youtube's embed feature pretty easily.  With some tweaking I was able to get youtube videos and spotify links running.
 
 
 ## List of Technologies

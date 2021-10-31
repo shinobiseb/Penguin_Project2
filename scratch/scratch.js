@@ -3,7 +3,7 @@ $('#youtubeId').keyup(function() {
   delay(function() {
     var videoID = $('#youtubeId').val();
     var videos = "https://www.googleapis.com/youtube/v3/videos";
-    var apiKey = "AIzaSyAzYHm1iwMocB9pW2uZrz_6Sqte5t_bXGo"; // Insert here your api key
+    var apiKey = "AIzaSyCcYfVVoICvNP_2OZ1HOHQ_h81rvv55Tag"; // Insert here your api key
     var fieldsTitle = "fields=items(snippet(title))";
     var fieldsEmpty = "";
     var part = "part=snippet";
@@ -31,3 +31,4 @@ $('#youtubeId').keyup(function() {
     });
   }, 1000);
 });
+

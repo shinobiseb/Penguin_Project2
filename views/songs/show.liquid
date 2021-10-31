@@ -1,16 +1,18 @@
 {% layout "layout.liquid" %} {% block content %}
-      <div>
-        <article>
+      <div class="row">
+          <div class="grid-example col s12 m12">
+            <article class="songContainer">
+              <div class="showHeader">
           <h2>
             {{ song.name }}
           </h2>
-          <h3> {{ song.desc }}</h3>
-          <img class="showImg" src={{song.img}}> 
+          <h3>{{song.artist}} </h3>
+          <h3 class="desc"> {{ song.desc }}</h3>
+          </div>
+          <img class="showImg" src={{song.img}}>
           <br>
-          <!-- <audio src="{{song.URL}}"></audio> -->
-          <video width="640" height="360">
-  <source type="video/youtube" src="https://www.youtube.com/embed/{{song.URL}}" />
-</video>
+        <!-- {{song.URL}} -->
+        <iframe width="560" height="315" src="{{song.URL}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="showActions">
           <a href="/playlist/{{ song._id }}/edit">
             <button class="waves-effect waves-light btn">Edit</button></a>
@@ -18,7 +20,7 @@
             <button class="waves-effect waves-light btn" type="submit" value="Delete"> Delete </button>
           </form>
           <a href="/playlist/"> <button class="waves-effect waves-light btn">Back to Main</button></a>
+          </article>
           </div>
-        </article>
       </div>
 {% endblock %}

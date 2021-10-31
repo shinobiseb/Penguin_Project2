@@ -1,6 +1,7 @@
 body {
     margin: 2em 10em;
     background-color: #5C374C;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -11,7 +12,8 @@ main {
 }
 
 .headerText {
-    font-family: 'Bangers', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
     margin: 5px;
     text-shadow: 2px 2px 2px white;
 }
@@ -22,10 +24,12 @@ a {
 
 h2 {
     font-size: 2em;
+    text-align: center;
 }
 
 h3 {
     font-size: 1.5em;
+    text-align: center;
 }
 
 .indexHeader {
@@ -45,6 +49,11 @@ h3 {
     background-color: #FF8C61;
     color: black;
     margin: auto 0;
+}
+
+#newSongBut:hover {
+    background-color: white;
+    color: black;
 }
 
 #footer {
@@ -85,6 +94,7 @@ button {
 .collection-item:hover {
     background-color: #ffbd9d !important;
     color: white !important;
+    text-shadow: 2px 2px 2px rgba(110, 110, 110, 0.315);;
 }
 
 .collection {
@@ -95,8 +105,70 @@ button {
     color: black;
 }
 
-
-
 .showActions {
     margin: 15px auto;
 }
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#update {
+    margin: 2px !important;
+}
+
+button:hover {
+    transform: scale(.9) !important;
+    background-color: white !important;
+}
+
+.showImg {
+    width: 70%;
+    box-shadow: 0px 0px 10px 5px rgb(255, 160, 160) ;
+}
+
+iframe {
+    box-shadow: 0px 0px 10px 5px rgb(255, 160, 160) ;
+}
+
+@media screen and (max-width: 600px) {
+    iframe {
+        width: 250px;
+    }
+}
+
+.songContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: scale .3s 1 ease-out;
+    animation-direction: normal;
+}
+
+.desc {
+    margin: 25px auto;
+}
+
+.showHeader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+fieldset {
+    background-color: #CE6A85;
+}
+
+legend {
+    color: white;
+}
+

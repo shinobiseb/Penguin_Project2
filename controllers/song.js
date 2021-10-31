@@ -15,35 +15,35 @@ const router = express.Router();
 //   res.render("your server is running... better catch it.");
 // });
 
-router.get("/playlist/seed", (req, res)=> {
+router.get("/seed", (req, res)=> {
     const startSongs = [
         { 
             name: "Draft One", 
             URL: "https://www.youtube.com/watch?v=pFbDR44m7Hc", 
             artist: "Sketch the Conductor", 
-            desc: "Sad song about someone",
-            img: "https://i2.wp.com/www.zigzagtrails.com/wp-content/uploads/2018/05/01A5330-Edit.jpg?fit=1400%2C933&ssl=1"
+            desc: "Sad song for those who wish to vent frustrations with loss",
+            img: "https://angartwork.akamaized.net/?id=133586580&size=640"
         },
         { 
-            name: "Midnight Tokyo", 
-            URL: "https://open.spotify.com/track/2rBZ51poWPQH9Fx8nTJv53?si=39ab4c7d7b0e4928", 
-            artist: "Deko", 
-            desc: "Some song by Deko",
-            img: "https://i.ytimg.com/vi/OqJi_n3AcV4/maxresdefault.jpg"
+            name: "The Tempo's 100", 
+            URL: "https://open.spotify.com/track/5PPCUZOCdjDZQoaM77e86K?si=1d37f40569a04395", 
+            artist: "Sketch the Conductor", 
+            desc: "Another rapid fire venting song about depression and suicide",
+            img: "https://s.mxmcdn.net/images-storage/albums4/8/1/2/7/9/2/46297218_800_800.jpg"
         },
         { 
-            name: "Love You like a Love song", 
-            URL: "https://www.youtube.com/watch?v=EgT_us6AsDg", 
-            artist: "Selena Gomez", 
-            desc: "Disney star song",
-            img: "https://i1.sndcdn.com/artworks-yn6i6oIe3RmXrgEz-kAev0Q-t500x500.jpg"
+            name: "Start a Riot", 
+            URL: "https://open.spotify.com/embed/track/4Zw8F4DLLzUMbkIulCDEAv?", 
+            artist: "Sketch the conductor", 
+            desc: "Hype angry song following the BLM protests",
+            img: "https://i1.sndcdn.com/artworks-jIXxnoA28n1TxEKd-bvXDBA-t500x500.jpg"
         },
         { 
-            name: "KERAUNOS", 
-            URL: "https://www.youtube.com/watch?v=D52kastH1R8", 
-            artist: "PlayaPhonk", 
-            desc: "Phonk song",
-            img: "https://i.ytimg.com/vi/whep_5RCU6g/maxresdefault.jpg"
+            name: "Kira Yoshikage Theme Remix", 
+            URL: "https://soundcloud.com/shinobisketch/kira-yoshikage-theme-remix-prod-shinobisyntax?si=7eabd432ee2143f282cc3fcde32245fb", 
+            artist: "ShinobiSyntax", 
+            desc: "Hard Trap Song Remix of a Jojo's Bizarre adventure theme",
+            img: "https://i1.sndcdn.com/artworks-bA1msZWh3VCftQSR-8Uv09g-t500x500.jpg"
         },
     ]
     Song.deleteMany({})
@@ -104,6 +104,13 @@ router.get("/:id/edit", (req, res) => {
 router.put("/:id", (req, res) => {
   // get the id from params
   const id = req.params.id;
+  if(req.body.URL.includes('embed') === false) {
+  const nonEmbedLink = req.body.URL
+  const splitUp = nonEmbedLink.split('?v=');
+  const vid = splitUp[1];
+  const embedVersion = 'https://www.youtube.com/embed/' + vid;
+  req.body.URL = embedVersion
+}
   // update the fruit
   Song.findByIdAndUpdate(id, req.body, { new: true })
     .then((song) => {
