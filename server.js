@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
   res.render(index.liquid)
 });
 
+app.get("/", (req, res) => {
+  res.send("This should work")
+})
+
 //////////////////////////////////////////////
 // Server Listener
 //////////////////////////////////////////////
