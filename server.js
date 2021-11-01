@@ -27,7 +27,7 @@ app.use(express.static("public")); // serve files from public statically
 app.use("/playlist", songRouter)
 
 app.get("/", (req, res) => {
-  res.send("your server is running... better catch it.");
+  res.render(index.liquid)
 });
 
 //////////////////////////////////////////////

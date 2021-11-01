@@ -11,9 +11,6 @@ const router = express.Router();
 ////////////////////////////////////////////
 // Routes
 ////////////////////////////////////////////
-// router.get("/", (req, res) => {
-//   res.render("your server is running... better catch it.");
-// });
 
 router.get("/seed", (req, res)=> {
     const startSongs = [

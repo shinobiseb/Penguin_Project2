@@ -246,6 +246,9 @@ legend {
   body {
     margin: 0 auto;
   }
+  #confirmation {
+    margin: 10px 0;
+  }
   .headerText {
       font-size: 2em;
   }

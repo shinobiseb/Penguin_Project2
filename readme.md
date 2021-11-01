@@ -3,7 +3,7 @@
 
 ## Project Summary
 
-My build will be using Express, Liquid, and Node to create a playlist from multiple streaming platforms. It will also use HTML, CSS, Javascript, Dotenv, Liquid-Express-Views, Method-Override, Mongoose, and Morgan.
+My build will be using Express, Liquid, and Node to create a list of your favorite songs from Youtube and include pictures and videos of the song. It will also use HTML, CSS, Javascript, Dotenv, Liquid-Express-Views, Method-Override, Mongoose, and Morgan.
 
 ## Models
 
@@ -12,13 +12,7 @@ Song
  - link: {type: String, required: true}
  - artist: {type: String, required: true}
  - description: String
-
- User
- - username: {type: String, required: true, unique: true},
- - password: {type: String, required: true}
  
- 
-
 ## Route Table
 
 List your routes in a table
@@ -73,4 +67,4 @@ I still need to do some work on getting the songs to play in a playlist format, 
 
 ## List of Technologies
 
-HTML, CSS, Javascript, Dotenv, Liquid-Express-Views, Method-Override, Mongoose, Express, Liquid, Materialise and Morgan
+HTML, CSS, Javascript, Dotenv, Liquid-Express-Views, Method-Override, JQuery, Mongoose, Express, Liquid, Materialise and Morgan
