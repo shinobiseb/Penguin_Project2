@@ -15,8 +15,18 @@
     </a>
   </article>
   {% endfor %}
+  <button id="reset" class="waves-effect waves-light btn">
+    Reset Playlist
+  </button>
 </div>
-
-
-
+<div id="modalAll">
+<div id="modal">
+  <div class="question"><h2>Are you sure you want to reset your playlist?</h2></div>
+  <div id="confirmation">
+    <a id="yes" onClick="fetch('/playlist/seed')" class="waves-effect waves-light btn" data-yes>Yes</a>
+    <a id="no" class="waves-effect waves-light btn" data-no="">No</a>
+  </div>
+</div>
+<div id="overlay"></div>
+</div>
 {% endblock %}

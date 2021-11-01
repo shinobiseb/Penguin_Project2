@@ -19,28 +19,28 @@ router.get("/seed", (req, res)=> {
     const startSongs = [
         { 
             name: "Draft One", 
-            URL: "https://www.youtube.com/watch?v=pFbDR44m7Hc", 
+            URL: "https://www.youtube.com/embed/pFbDR44m7Hc", 
             artist: "Sketch the Conductor", 
             desc: "Sad song for those who wish to vent frustrations with loss",
             img: "https://angartwork.akamaized.net/?id=133586580&size=640"
         },
         { 
             name: "The Tempo's 100", 
-            URL: "https://open.spotify.com/track/5PPCUZOCdjDZQoaM77e86K?si=1d37f40569a04395", 
+            URL: "https://www.youtube.com/embed/cKdY9NlD6GE", 
             artist: "Sketch the Conductor", 
             desc: "Another rapid fire venting song about depression and suicide",
             img: "https://s.mxmcdn.net/images-storage/albums4/8/1/2/7/9/2/46297218_800_800.jpg"
         },
         { 
             name: "Start a Riot", 
-            URL: "https://open.spotify.com/embed/track/4Zw8F4DLLzUMbkIulCDEAv?", 
+            URL: "https://www.youtube.com/embed/Tzru5OWseZU", 
             artist: "Sketch the conductor", 
             desc: "Hype angry song following the BLM protests",
             img: "https://i1.sndcdn.com/artworks-jIXxnoA28n1TxEKd-bvXDBA-t500x500.jpg"
         },
         { 
             name: "Kira Yoshikage Theme Remix", 
-            URL: "https://soundcloud.com/shinobisketch/kira-yoshikage-theme-remix-prod-shinobisyntax?si=7eabd432ee2143f282cc3fcde32245fb", 
+            URL: "https://www.youtube.com/embed/Vjf3xgwQLCM", 
             artist: "ShinobiSyntax", 
             desc: "Hard Trap Song Remix of a Jojo's Bizarre adventure theme",
             img: "https://i1.sndcdn.com/artworks-bA1msZWh3VCftQSR-8Uv09g-t500x500.jpg"
@@ -69,6 +69,13 @@ router.get("/new", (req, res) => {
 
 // create route
 router.post("/", (req, res) => {
+    if(req.body.URL.includes('embed') === false) {
+  const nonEmbedLink = req.body.URL
+  const splitUp = nonEmbedLink.split('?v=');
+  const vid = splitUp[1];
+  const embedVersion = 'https://www.youtube.com/embed/' + vid;
+  req.body.URL = embedVersion
+}
   // create the new fruit
   Song.create(req.body)
     .then((song) => {
